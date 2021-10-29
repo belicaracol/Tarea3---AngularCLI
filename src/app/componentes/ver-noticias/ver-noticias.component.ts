@@ -13,23 +13,22 @@ export class VerNoticiasComponent implements OnInit {
   ListaDestacadas=ListaDestacadas;
   ListaCategorias=ListaCategorias;
   id:number=0;
+  idCategoria:any;
   Noticia:any;
   Categoria:any;
 
-  constructor() { 
-  }
-
   ngOnInit(): void {
+    console.log("WENA PAOQL");
     for(this.id=1; this.id<=150; this.id++) {
       if(this.id >= 100)
       {
         this.Noticia=ListaDestacadas.find(objeto=>objeto.id==this.id);
-        this.Categoria=ListaCategorias.find(objeto=>objeto.id==this.Noticia.idCategoria);
+        this.Categoria=ListaCategorias.find(objeto=>objeto.id==this.Categoria);
       }
       else
       {
         this.Noticia=ListaNoticias.find(objeto=>objeto.id==this.id);
-        this.Categoria=ListaCategorias.find(objeto=>objeto.id==this.Noticia.idCategoria);
+        this.Categoria=ListaCategorias.find(objeto=>objeto.id==this.Categoria);
       }
     }
   }
