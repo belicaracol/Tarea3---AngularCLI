@@ -18,7 +18,6 @@ export class VerNoticiasComponent implements OnInit {
   Categoria:any;
 
   ngOnInit(): void {
-    console.log("WENA PAOQL");
     for(this.id=1; this.id<=150; this.id++) {
       if(this.id >= 100)
       {
